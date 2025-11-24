@@ -66,6 +66,19 @@ const ProblemView: React.FC<ProblemViewProps> = ({
         </div>
       )}
 
+      {/* Solution Code - shown after evaluation */}
+      {evaluation && problem.solutionCode && (
+        <div className="rounded-lg border border-blue-800 bg-blue-900/20">
+          <div className="flex items-center gap-2 px-4 py-3 border-b border-blue-800">
+            <CheckCircle2 size={16} className="text-blue-400" />
+            <h3 className="text-sm font-semibold text-blue-400 uppercase tracking-wider">정답 코드</h3>
+          </div>
+          <pre className="p-4 overflow-x-auto text-sm font-mono text-slate-300 whitespace-pre-wrap">
+            <code>{problem.solutionCode}</code>
+          </pre>
+        </div>
+      )}
+
       {/* Hints Section */}
       <div className="space-y-3">
         <div className="flex items-center justify-between">
