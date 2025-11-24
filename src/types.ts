@@ -9,6 +9,7 @@ export enum Topic {
 }
 
 export enum Difficulty {
+  BEGINNER = '입문',
   JUNIOR = '초급',
   MID = '중급',
   SENIOR = '고급'

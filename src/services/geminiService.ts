@@ -12,13 +12,19 @@ export const generateProblem = async (topic: Topic, difficulty: Difficulty): Pro
       Create a deep learning coding interview problem using PyTorch in Korean (한국어).
       Topic: ${topic}
       Difficulty: ${difficulty}
-      
+
+      Difficulty Guidelines:
+      - 입문 (Beginner): Very basic concepts. Simple tensor operations, basic neural network concepts. No complex math. Heavily guided with comments. Suitable for someone just starting to learn PyTorch.
+      - 초급 (Junior): Basic implementation. Simple layers, forward pass. Some guidance provided.
+      - 중급 (Mid): Moderate complexity. Custom implementations, understanding of gradients.
+      - 고급 (Senior): Advanced topics. Complex architectures, optimization tricks, edge cases.
+
       The problem should focus on implementation details relevant to the topic.
       Ensure the description clearly states input/output shapes and expected behavior.
       Provide a starter code snippet that sets up imports and the class structure but leaves the logic empty (pass).
       Provide the full solution code.
       Provide 3 helpful hints in Korean.
-      
+
       IMPORTANT: All text (Title, Description, Hints) must be in Korean. Variable names and code comments can be in English or Korean.
     `;
 
