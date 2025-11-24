@@ -16,7 +16,7 @@ const App: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
 
   const handleGenerateProblem = async () => {
-    if (!import.meta.env.VITE_GEMINI_API_KEY) {
+    if (!import.meta.env.VITE_API_KEY) {
         setError("API 키가 누락되었습니다. 설정을 확인해주세요.");
         return;
     }
