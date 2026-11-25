@@ -1,5 +1,5 @@
 import { GoogleGenAI, Type, type Schema } from "@google/genai";
-import { Difficulty, Topic, type Problem } from "../src/types";
+import { Difficulty, Topic, type Problem } from "../src/types.js";
 
 /**
  * Stable GA Flash model.
