@@ -16,11 +16,6 @@ const App: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
 
   const handleGenerateProblem = async () => {
-    if (!import.meta.env.VITE_API_KEY) {
-        setError("API 키가 누락되었습니다. 설정을 확인해주세요.");
-        return;
-    }
-
     setLoadingState('generating_problem');
     setError(null);
     setEvaluation(null);
@@ -31,7 +26,7 @@ const App: React.FC = () => {
       setCurrentProblem(problem);
       setUserCode(problem.starterCode);
     } catch (err) {
-      setError("문제 생성에 실패했습니다. 다시 시도해주세요.");
+      setError(err instanceof Error && err.message ? err.message : "문제 생성에 실패했습니다. 다시 시도해주세요.");
       console.error(err);
     } finally {
       setLoadingState('idle');
@@ -48,7 +43,7 @@ const App: React.FC = () => {
       const result = await GeminiService.evaluateSubmission(currentProblem, userCode);
       setEvaluation(result);
     } catch (err) {
-      setError("채점에 실패했습니다.");
+      setError(err instanceof Error && err.message ? err.message : "채점에 실패했습니다.");
       console.error(err);
     } finally {
       setLoadingState('idle');
