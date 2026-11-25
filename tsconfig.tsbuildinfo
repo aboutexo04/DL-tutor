@@ -1,1 +1,1 @@
-{"root":["./src/app.tsx","./src/main.tsx","./src/types.ts","./src/vite-env.d.ts","./src/components/codeeditor.tsx","./src/components/problemview.tsx","./src/components/topicselector.tsx","./src/services/geminiservice.ts"],"version":"5.6.3"}
+{"root":["./src/App.tsx","./src/main.tsx","./src/types.ts","./src/vite-env.d.ts","./src/components/CodeEditor.tsx","./src/components/ProblemView.tsx","./src/components/TopicSelector.tsx","./src/services/geminiService.ts","./api/gemini.ts"],"version":"5.6.3"}
